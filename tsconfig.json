@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    // …
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "app/**/*"     // <-- assicurati che "app" (o "src/app") sia incluso
+  ],
+  "exclude": ["node_modules"]
+}

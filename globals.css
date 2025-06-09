@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========== COMPONENTE: Animated Gradient ==========
+   Usa su un container con .animated-gradient
+=================================================== */
+@keyframes gradientBG {
+  0%   { background-position: 0 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+.animated-gradient {
+  background: linear-gradient(-45deg, #4f46e5, #3b82f6, #06b6d4, #8b5cf6);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+}
+
+/* ========== COMPONENTE: Text Gradient Animation ==========
+   Usa su testo con .animate-text e bg-clip-text
+=================================================== */
+@keyframes textMove {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-text {
+  background-size: 200% 200%;
+  animation: textMove 5s ease infinite;
+}
+
+/* ========== Utility: Caret Blink ==========
+   Usa su elemento .animate-caret
+=================================================== */
+@keyframes caretBlink {
+  0%, 50%   { opacity: 1; }
+  50.1%,100%{ opacity: 0; }
+}
+.animate-caret {
+  animation: caretBlink 1s steps(1) infinite;
+}
+
+/* ========== Utility: Fade In ==========
+   Usa su .animate-fade-in
+=================================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fadeIn 1s ease-out both;
+}
+
+/* ========== Utility: Fade In Up ==========
+   Usa su .animate-fade-in-up
+=================================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out both;
+}
